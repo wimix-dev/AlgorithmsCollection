@@ -12,6 +12,8 @@ jobs:
     runs-on: macos-latest
 
     steps:
+    - name: ListXcode
+      run: ls -n /Applications/ | grep Xcode*
     - uses: actions/checkout@v2
     - name: Build
       run: swift build -v
